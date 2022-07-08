@@ -669,11 +669,9 @@ body {
 a {
   transition: color 0.6s;
 }
-.cid-taTwwwrVwV .navbar-dropdown {
-  position: relative !important;
-}
-.cid-taTwwwrVwV .navbar-dropdown {
-  position: absolute !important;
+.cid-taTwwwrVwV {
+  z-index: 1000;
+  width: 100%;
 }
 .cid-taTwwwrVwV .show .link,
 .cid-taTwwwrVwV .show .mbr-iconfont,
@@ -696,6 +694,9 @@ a {
     display: block;
     padding: 1rem 0;
   }
+}
+.cid-taTwwwrVwV nav.navbar {
+  position: fixed;
 }
 .cid-taTwwwrVwV .dropdown-item:before {
   font-family: Moririse2 !important;
@@ -1015,6 +1016,7 @@ a {
 }
 .cid-taTwwwrVwV .navbar-dropdown {
   padding: 0 1rem;
+  position: fixed;
 }
 .cid-taTwwwrVwV a.nav-link {
   display: flex;
