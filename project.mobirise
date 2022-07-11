@@ -89,7 +89,7 @@
     "uniqCompNum": 114,
     "versionPublish": "5.6.11",
     "screenshot": "screenshot.png",
-    "publishChangesOnly": true,
+    "publishChangesOnly": false,
     "PWA": {
       "enabled": true,
       "name": "",
