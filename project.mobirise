@@ -96,6 +96,8 @@
       "icon": "@PROJECT_PATH@/assets/images/aludach-logo-512x512.png",
       "themeColor": "#232323"
     },
+    "publishType": "local",
+    "publishPath": "@PROJECT_PATH@",
     "global_header_custom": "<script type=\"text/javascript\" src=\"https://cdn.weglot.com/weglot.min.js\"></script>\n<script>\n    Weglot.initialize({\n        api_key: 'wg_421da7693dfbbdbc2856fe1283f5cb3d4'\n    });\n</script>"
   },
   "pages": {
