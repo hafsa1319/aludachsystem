@@ -512,7 +512,7 @@ a[class*="text-"]:not(.nav-link):not(.dropdown-item):not([role]):not(.navbar-cap
   background-repeat: no-repeat;
   background-position: 0px 1.2em;
   background-position: -10000px 1.2em;
-  font-size: 14px;
+  font-size: 16px;
 }
 a[class*="text-"]:not(.nav-link):not(.dropdown-item):not([role]):not(.navbar-caption):hover {
   transition: background-position 2s ease-in-out;
