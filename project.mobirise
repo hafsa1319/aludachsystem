@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "Aludach",
-    "currentPage": "kontakt.html",
+    "currentPage": "index.html",
     "theme": {
       "name": "complexm5",
       "title": "ComplexM5",
@@ -91,7 +91,7 @@
       "text": "Wenn Sie fortfahren, erklären Sie sich mit unserem <a  href='policy.html'>Datenschutz</a>."
     },
     "pwa-switcher": true,
-    "uniqCompNum": 241,
+    "uniqCompNum": 243,
     "versionPublish": "5.6.11",
     "screenshot": "screenshot.png",
     "publishChangesOnly": false,
@@ -958,94 +958,24 @@
           "_params": {}
         },
         {
-          "alias": false,
+          "_name": "content1",
+          "_sourceTheme": "globalm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"content1\" group=\"Content\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Reverse\" name=\"reverseContent\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n        <input type=\"color\" title=\"BG Icon\" name=\"iconBg\" value=\"#124AD6\" condition=\"showButtons\">\n        <input type=\"color\" title=\"Color Icon\" name=\"iconColor\" value=\"#ffffff\" condition=\"showButtons\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n            <input type=\"image\" title=\"Image\" value=\"@ADDONS_PATH@/globalm5/components/_images/background1.jpg\" parallax>\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"@ADDONS_PATH@/globalm5/components/_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div mbr-class=\"{'container': !fullWidth}\">\n        <div class=\"row align-items-center\" mbr-class=\"{'flex-row-reverse' : reverseContent}\">\n            <div class=\"col-12 col-lg-6\">\n                <div class=\"text-wrapper\">\n                    <h2 class=\"mbr-section-title mbr-fonts-style\" data-app-selector=\".mbr-section-title, .mbr-section-btn\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\">\n                        <b>Über Uns</b></h2>\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">Aludach-System will der Projektpartner sein, der die schnellste,\n<br>wirtschaftlichste und qualitativ hochwertigste Lösung bietet, indem er&nbsp;sich mit „kundenorientierter“ Mentalität an den Bedürfnissen seiner&nbsp;Kunden entwickelt\n<br>\n<br>Als Aludach-System sind wir uns unserer Verantwortung gegenüber&nbsp;Gesellschaft und Umwelt bewusst. Wir sind sensibel für die Natur, Wir&nbsp;handeln und dienen nach den Grundsätzen der Schonung des&nbsp;ökologischen Gleichgewichts, der Minimierung des Verbrauchs&nbsp;natürlicher Ressourcen und der Steigerung der Energieeffizienz. Dafür&nbsp;wollen wir unsere Mitarbeiter, Lieferanten und Stakeholder&nbsp;sensibilisieren und fördern. \n<br>\n<br><b>Unsere Motivation\n</b><br>Unsere Arbeit ist unser Ziel, unsere treibende Kraft. Aus diesem Grund&nbsp;stehen wir jeden Tag auf und tun, was wir tun. Am wichtigsten ist, dass&nbsp;es uns immer wieder dazu bringt, mit jeder neuen Herausforderung&nbsp;größere und bessere Dinge zu erreichen.</p>\n                    <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showButtons\">\n                        <a class=\"btn btn-primary-outline\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">\n                            <span class=\"mobi-mbri mobi-mbri-arrow-next mbr-iconfont mbr-iconfont-btn\"></span>See More\n                        </a>\n                    </div>\n                </div>\n            </div>\n            <div class=\"col-12 col-lg-6\">\n                <div class=\"image-wrapper\">\n                    <img src=\"@PROJECT_PATH@/assets/images/alu1-826x619.png\" alt=\"Mobirise Website Builder\">\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
           "_styles": {
             "& when not (@fullScreen)": {
               "padding-top": "(@paddingTop * 1rem)",
               "padding-bottom": "(@paddingBottom * 1rem)"
             },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
-            },
             "& when (@bg-type = 'color')": {
               "background-color": "@bg-value"
             },
-            ".mbr-section-title": {
-              "color": "#000000"
-            },
-            "& when (@showLink)": {
-              ".col-lg-5": {
-                "display": "flex",
-                "flex-direction": "column",
-                "justify-content": "space-between"
-              }
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
             },
             ".row": {
-              "justify-content": "space-between"
-            },
-            ".image-wrapper": {
-              "margin-top": "135px",
-              "width": "700px",
-              "height": "700px",
-              "margin-bottom": "1px!important",
               "@media (max-width: 992px)": {
-                "margin-bottom": "2rem"
-              },
-              "@media (min-width: 1400px)": {
-                "margin-right": "4rem"
+                "flex-direction": "column-reverse"
               }
-            },
-            ".link-wrapper": {
-              "display": "flex",
-              "align-items": "flex-end",
-              "justify-content": "flex-end",
-              "cursor": "pointer",
-              "margin-top": "1rem",
-              ".link-icon": {
-                "font-size": "6rem",
-                "transform": "rotate(-45deg) translate(-20px, 30px)",
-                "padding-left": "1rem",
-                "transition": "all 0.3s",
-                "transform-origin": "left"
-              },
-              "@media (max-width: 1400px)": {
-                "margin-top": "2rem"
-              },
-              "@media (max-width: 767px)": {
-                "justify-content": "center"
-              },
-              "&:hover": {
-                ".link-icon": {
-                  "transform": "rotate(-45deg) scale(0.5) translate(-30px, 50px)"
-                }
-              }
-            },
-            ".mbr-section-subtitle": {
-              "width": "fit-content",
-              "text-align": "center",
-              "background": "@box",
-              "cursor": "pointer",
-              "transform": "rotate(-90deg)",
-              "display": "block",
-              "transform-origin": "left",
-              "margin-left": "4.1rem",
-              "padding": "2rem 4rem",
-              "padding-bottom": "2.5rem",
-              "margin-bottom": "0",
-              "color": "#ffffff",
-              "transition": "all 0.3s",
-              "&:hover": {
-                "background": "@primaryColor",
-                "color": "contrast(@primaryColor)"
-              },
-              "@media (max-width: 767px)": {
-                "width": "300px",
-                "padding": "2rem 2rem",
-                "margin-left": "3.5rem"
-              }
-            },
-            ".link, .link-icon": {
-              "color": "#000000"
             },
             ".mbr-fallback-image.disabled": {
               "display": "none"
@@ -1061,13 +991,249 @@
               "& when (@bg-type = 'video')": {
                 "background-image": "url(@fallBackImage)"
               }
+            },
+            ".mbr-section-btn": {
+              ".btn": {
+                "height": "21px",
+                "min-width": "70px",
+                "position": "relative",
+                "overflow": "visible",
+                "padding": "0 12px 0 0",
+                "justify-content": "flex-start",
+                "margin-left": "28px",
+                "box-shadow": "none",
+                "&:first-child": {
+                  "margin-left": "9.6px"
+                },
+                "&:focus": {
+                  "box-shadow": "none"
+                },
+                "span": {
+                  "position": "absolute",
+                  "right": "-12px",
+                  "width": "18px",
+                  "height": "18px",
+                  "font-size": "8px",
+                  "display": "flex",
+                  "align-items": "center",
+                  "justify-content": "center",
+                  "border-radius": "50%",
+                  "background": "@iconBg",
+                  "color": "@iconColor",
+                  "margin": "2px 0 0 12px",
+                  "padding-left": "2px",
+                  "transition": "all .33s ease"
+                },
+                "&:hover": {
+                  "transform": "scale(1) !important",
+                  "color": "@primaryColor !important",
+                  "span": {
+                    "width": "28px",
+                    "border-radius": "22px",
+                    "right": "-28px"
+                  }
+                }
+              }
+            },
+            ".text-wrapper": {
+              "margin-left": "160px",
+              "position": "relative",
+              "@media (max-width: 992px)": {
+                "margin": "0 30px"
+              },
+              "& when (@reverseContent)": {
+                "margin-left": "0",
+                "margin-right": "160px",
+                "@media (max-width: 992px)": {
+                  "margin": "0 30px"
+                }
+              },
+              ".mbr-section-title": {
+                "margin-bottom": "20px",
+                "@media (max-width: 768px)": {
+                  "margin-bottom": "12px"
+                }
+              },
+              ".mbr-text": {
+                "@media (max-width: 768px)": {
+                  "margin-bottom": "20px"
+                }
+              }
+            },
+            ".image-wrapper": {
+              "margin-left": "200px",
+              "@media (max-width: 992px)": {
+                "margin": "0 30px 30px"
+              },
+              "& when (@reverseContent)": {
+                "margin-left": "0",
+                "margin-right": "200px",
+                "@media (max-width: 992px)": {
+                  "margin": "30px"
+                }
+              },
+              "img": {
+                "width": "100%",
+                "min-height": "760px",
+                "object-fit": "cover",
+                "@media (max-width: 992px)": {
+                  "min-height": "650px"
+                },
+                "@media (max-width: 768px)": {
+                  "min-height": "100%"
+                }
+              }
+            },
+            ".mbr-section-title": {
+              "color": "#000000"
+            },
+            ".mbr-text": {
+              "color": "#000000"
             }
           },
-          "_name": "content04",
-          "_sourceTheme": "complexm5",
-          "_customHTML": "<section data-bs-version=\"5.1\" class=\"article4\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"1\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Link\" name=\"showLink\">\n        <header condition=\"showSubitle\">Color</header>\n        <input type=\"color\" name=\"box\" title=\"Subtitle\" value=\"#000000\" condition=\"showSubitle\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#fafafa\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.2\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n    <div class mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row\">\n            <div class=\"col-12 col-md-12 col-lg-6 m-auto\">\n                <div class=\"image-wrapper p-0\">\n                    <img class=\"w-100\" src=\"@PROJECT_PATH@/assets/images/1-1300x867.jpg\" alt=\"Mobirise Website Builder\">\n                </div>\n            </div>\n            <div class=\"col-12 col-lg-6\">\n                <h2 class=\"mbr-section-title align-left mbr-fonts-style mb-1\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\"><b>Über uns</b></h2>\n                <p class=\"mbr-text align-left mbr-fonts-style pb-5\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Aludach-System will der Projektpartner sein, der die schnellste,\n<br>wirtschaftlichste und qualitativ hochwertigste Lösung bietet, indem er\n<br>sich mit „kundenorientierter“ Mentalität an den Bedürfnissen seiner\n<br>Kunden entwickelt<br>\n<br>Als Aludach-System sind wir uns unserer Verantwortung gegenüber\n<br>Gesellschaft und Umwelt bewusst. Wir sind sensibel für die Natur, Wir\n<br>handeln und dienen nach den Grundsätzen der Schonung des\n<br>ökologischen Gleichgewichts, der Minimierung des Verbrauchs\n<br>natürlicher Ressourcen und der Steigerung der Energieeffizienz. Dafür\n<br>wollen wir unsere Mitarbeiter, Lieferanten und Stakeholder\n<br>sensibilisieren und fördern.&nbsp;<br><br>Unsere Motivation\n<br>\n<br>Unsere Arbeit ist unser Ziel, unsere treibende Kraft. Aus diesem Grund\n<br>stehen wir jeden Tag auf und tun, was wir tun. Am wichtigsten ist, dass\n<br>es uns immer wieder dazu bringt, mit jeder neuen Herausforderung\n<br>größere und bessere Dinge zu erreichen.<br></p>\n                \n            </div>\n            \n            <div class=\"col-12 col-lg-6\">\n                <h2 class=\"mbr-section-title align-left mbr-fonts-style mb-1\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\">Unsere Vision</h2>\n                <p class=\"mbr-text align-left mbr-fonts-style pb-5\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Immer mehr Menschen träumen davon, ihre Terrasse aufzuwerten.\n<br>Nicht nur, um einen erhöhten Nutzwert zu erzielen oder ihrem\n<br>Garten einen ästhetischen Drive zu verleihen; sondern vor allem,\n<br>um unvergessliche Momente mit ihren Freunden und Liebsten zu\n<br>verbringen.<br>\n<br>Was wir bei Aludach-System noch mehr lieben als den Traum\n<br>selbst, ist ihn zu verwirklichen! Aludach-System liefert großartige\n<br>Produkte für den Außenbereich, die von hoher Qualität und in\n<br>einer mehr als fairen Preisklasse erhältlich sind.<br><br>Unsere Vision ist daher einfach, aber klar: Wir machen Träume\n<br>möglich!<br></p>\n               \n            </div>\n            <div class=\"col-12 col-md-12 col-lg-6 m-auto\">\n                <div class=\"image-wrapper p-0\">\n                    <img class=\"w-100\" src=\"@PROJECT_PATH@/assets/images/1-1300x867.jpg\" alt=\"Mobirise Website Builder\">\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "taTxmPvF8B",
-          "_anchor": "content04-3",
+          "_cid": "tlmeCwPLxH",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "content1-6p"
+        },
+        {
+          "_name": "content1",
+          "_sourceTheme": "globalm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"content1\" group=\"Content\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"2\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Reverse\" name=\"reverseContent\" checked>\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n        <input type=\"color\" title=\"BG Icon\" name=\"iconBg\" value=\"#124AD6\" condition=\"showButtons\">\n        <input type=\"color\" title=\"Color Icon\" name=\"iconColor\" value=\"#ffffff\" condition=\"showButtons\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n            <input type=\"image\" title=\"Image\" value=\"@ADDONS_PATH@/globalm5/components/_images/background1.jpg\" parallax>\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"@ADDONS_PATH@/globalm5/components/_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div mbr-class=\"{'container': !fullWidth}\">\n        <div class=\"row align-items-center\" mbr-class=\"{'flex-row-reverse' : reverseContent}\">\n            <div class=\"col-12 col-lg-6\">\n                <div class=\"text-wrapper\">\n                   <!-- <h2 class=\"mbr-section-title mbr-fonts-style\" data-app-selector=\".mbr-section-title, .mbr-section-btn\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">\n                        <b>Structural Engineering Consultants and Specialists</b>\n                    </h2> -->\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text\"><b>Unsere Vision</b><br><br>Immer mehr Menschen träumen davon, ihre Terrasse aufzuwerten.\n<br>Nicht nur, um einen erhöhten Nutzwert zu erzielen oder ihrem\n<br>Garten einen ästhetischen Drive zu verleihen; sondern vor allem,\n<br>um unvergessliche Momente mit ihren Freunden und Liebsten zu\n<br>verbringen.\n<br>\n<br>Was wir bei Aludach-System noch mehr lieben als den Traum\n<br>selbst, ist ihn zu verwirklichen! Aludach-System liefert großartige\n<br>Produkte für den Außenbereich, die von hoher Qualität und in\n<br>einer mehr als fairen Preisklasse erhältlich sind.\n<br>\n<br>Unsere Vision ist daher einfach, aber klar: Wir machen Träume\n<br>möglich!</p>\n                    <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showButtons\">\n                        <a class=\"btn btn-primary-outline\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">\n                            <span class=\"mobi-mbri mobi-mbri-arrow-next mbr-iconfont mbr-iconfont-btn\"></span>See More\n                        </a>\n                    </div>\n                </div>\n            </div>\n            <div class=\"col-12 col-lg-6\">\n                <div class=\"image-wrapper\">\n                    <img src=\"@PROJECT_PATH@/assets/images/resim11-908x605.png\" alt=\"Mobirise Website Builder\">\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".row": {
+              "@media (max-width: 992px)": {
+                "flex-direction": "column-reverse"
+              }
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".mbr-section-btn": {
+              ".btn": {
+                "height": "21px",
+                "min-width": "70px",
+                "position": "relative",
+                "overflow": "visible",
+                "padding": "0 12px 0 0",
+                "justify-content": "flex-start",
+                "margin-left": "28px",
+                "box-shadow": "none",
+                "&:first-child": {
+                  "margin-left": "9.6px"
+                },
+                "&:focus": {
+                  "box-shadow": "none"
+                },
+                "span": {
+                  "position": "absolute",
+                  "right": "-12px",
+                  "width": "18px",
+                  "height": "18px",
+                  "font-size": "8px",
+                  "display": "flex",
+                  "align-items": "center",
+                  "justify-content": "center",
+                  "border-radius": "50%",
+                  "background": "@iconBg",
+                  "color": "@iconColor",
+                  "margin": "2px 0 0 12px",
+                  "padding-left": "2px",
+                  "transition": "all .33s ease"
+                },
+                "&:hover": {
+                  "transform": "scale(1) !important",
+                  "color": "@primaryColor !important",
+                  "span": {
+                    "width": "28px",
+                    "border-radius": "22px",
+                    "right": "-28px"
+                  }
+                }
+              }
+            },
+            ".text-wrapper": {
+              "margin-left": "160px",
+              "position": "relative",
+              "@media (max-width: 992px)": {
+                "margin": "0 30px"
+              },
+              "& when (@reverseContent)": {
+                "margin-left": "0",
+                "margin-right": "160px",
+                "@media (max-width: 992px)": {
+                  "margin": "0 30px"
+                }
+              },
+              ".mbr-section-title": {
+                "margin-bottom": "20px",
+                "@media (max-width: 768px)": {
+                  "margin-bottom": "12px"
+                }
+              },
+              ".mbr-text": {
+                "@media (max-width: 768px)": {
+                  "margin-bottom": "20px"
+                }
+              }
+            },
+            ".image-wrapper": {
+              "margin-left": "200px",
+              "@media (max-width: 992px)": {
+                "margin": "0 30px 30px"
+              },
+              "& when (@reverseContent)": {
+                "margin-left": "0",
+                "margin-right": "200px",
+                "@media (max-width: 992px)": {
+                  "margin": "30px"
+                }
+              },
+              "img": {
+                "width": "100%",
+                "min-height": "760px",
+                "object-fit": "cover",
+                "@media (max-width: 992px)": {
+                  "min-height": "650px"
+                },
+                "@media (max-width: 768px)": {
+                  "min-height": "100%"
+                }
+              }
+            },
+            ".mbr-section-title": {
+              "color": "#000000"
+            },
+            ".mbr-text": {
+              "color": "#000000"
+            }
+          },
+          "_cid": "tlmeU1qDGG",
+          "_anchor": "content1-6q",
           "_PHPplaceholders": [],
           "_JSplaceholders": [],
           "_protectedParams": [],
